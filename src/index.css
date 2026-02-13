@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Inter', system-ui, sans-serif;
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-dark: #0f172a;
+  --color-light: #f8fafc;
+}
+
+:root {
+  /* Default Theme (Cosmic Blue/Purple) */
+  --color-primary: #3b82f6;
+  --color-secondary: #8b5cf6;
+  --color-accent: #ec4899;
+  --color-dark: #0f172a;
+  /* Slate 900 */
+  --bg-card: #1e293b;
+  /* Slate 800 */
+}
+
+/* Light Mode Theme */
+body.light-mode {
+  --color-dark: #f8fafc;
+  --bg-card: #ffffff;
+  color: #0f172a;
+}
+body.light-mode .text-gray-400 {
+  color: #475569;
+}
+body.light-mode .border-slate-800, 
+body.light-mode .border-slate-700 {
+    border-color: #e2e8f0;
+}
+body.light-mode .bg-slate-900,
+body.light-mode .bg-slate-800 {
+    background-color: #ffffff;
+    color: #0f172a;
+}
+body.light-mode .bg-slate-900\/80 {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Theme Variations */
+.theme-emerald {
+  --color-primary: #10b981;
+  --color-secondary: #06b6d4;
+  --color-accent: #f59e0b;
+  --color-dark: #022c22;
+  /* Emerald 950 */
+  --bg-card: #064e3b;
+  /* Emerald 900 */
+}
+
+/* Light Mode Overrides for specific themes */
+body.light-mode.theme-emerald {
+    --color-dark: #ecfdf5; 
+    --bg-card: #ffffff;
+    color: #022c22;
+}
+
+.theme-sunset {
+  --color-primary: #f97316;
+  --color-secondary: #e11d48;
+  --color-accent: #8b5cf6;
+  --color-dark: #2a0a18;
+  /* Rose/Orange mix Dark */
+  --bg-card: #4c0519;
+  /* Rose 950 */
+}
+
+body.light-mode.theme-sunset {
+    --color-dark: #fff1f2;
+    --bg-card: #ffffff;
+    color: #2a0a18;
+}
+
+.theme-ocean {
+  --color-primary: #0ea5e9;
+  --color-secondary: #1d4ed8;
+  --color-accent: #2dd4bf;
+  --color-dark: #082f49;
+  /* Sky 950 */
+  --bg-card: #0c4a6e;
+  /* Sky 900 */
+}
+
+body.light-mode.theme-ocean {
+    --color-dark: #f0f9ff;
+    --bg-card: #ffffff;
+    color: #082f49;
+}
+
+.theme-cyber {
+  --color-primary: #d946ef;
+  --color-secondary: #6366f1;
+  --color-accent: #22d3ee;
+  --color-dark: #1e1b4b;
+  /* Indigo 950 */
+  --bg-card: #312e81;
+  /* Indigo 900 */
+}
+
+body.light-mode.theme-cyber {
+    --color-dark: #f5f3ff;
+    --bg-card: #ffffff;
+    color: #1e1b4b;
+}
+
+/* Font Variations - Applied to Body via Context */
+.font-sans body {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-serif body {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-mono body {
+  font-family: 'Fira Code', monospace;
+}
+
+.font-system body {
+  font-family: system-ui, sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: #fff;
+  /* fallback */
+  color: var(--color-light, #f8fafc);
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Dynamic Classes using CSS Variables */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.bg-gradient-theme {
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+}
+
+.text-gradient-theme {
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
