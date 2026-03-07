@@ -4,7 +4,7 @@ import useFetch from '../../hooks/useFetch';
 import { Spinner } from '../Loaders';
 
 const ExperienceSection = () => {
-    const { data: experiences, loading } = useFetch('http://localhost:5000/api/experience');
+    const { data: experiences, loading } = useFetch('/api/experience');
 
     if (loading) return <div className="py-20"><Spinner /></div>;
 

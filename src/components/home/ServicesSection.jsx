@@ -37,7 +37,7 @@ const getIcon = (iconName, title) => {
 import { SkeletonCard } from '../Loaders';
 
 const ServicesSection = () => {
-    const { data: services, loading } = useFetch('http://localhost:5000/api/services');
+    const { data: services, loading } = useFetch('/api/services');
 
     if (loading) {
         return (

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import axios from 'axios';
+import API from '../api';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaCheck } from 'react-icons/fa';
 import { useSettings } from '../context/SettingsContext'; // Import hook
 
@@ -22,7 +22,7 @@ const ContactPage = () => {
         e.preventDefault();
         setStatus('loading');
         try {
-            await axios.post('http://localhost:5000/api/contact', formData);
+            await API.post('/api/contact', formData);
             setStatus('success');
             setFormData({ name: '', email: '', phone: '', message: '' }); // Reset phone too
             setTimeout(() => setStatus('idle'), 3000);

@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios normally when you just need the base URL; we now centralize
+import API from '../api';
 
-const useFetch = (url) => {
+const useFetch = (endpoint) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -9,7 +10,8 @@ const useFetch = (url) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(url);
+                // API already prepends the base URL from env
+                const response = await API.get(endpoint);
                 setData(response.data);
                 setLoading(false);
             } catch (err) {
@@ -19,7 +21,7 @@ const useFetch = (url) => {
         };
 
         fetchData();
-    }, [url]);
+    }, [endpoint]);
 
     return { data, loading, error };
 };

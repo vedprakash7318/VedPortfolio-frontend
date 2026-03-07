@@ -5,7 +5,7 @@ import useFetch from '../hooks/useFetch';
 import { SkeletonCard } from '../components/Loaders';
 
 const ProjectsPage = () => {
-    const { data: projects, loading } = useFetch('http://localhost:5000/api/projects');
+    const { data: projects, loading } = useFetch('/api/projects');
     const [filteredProjects, setFilteredProjects] = useState([]);
     const [activeCategory, setActiveCategory] = useState('All');
     const [selectedProject, setSelectedProject] = useState(null);

@@ -17,7 +17,7 @@ const getIcon = (iconName) => {
 };
 
 const ServicesPage = () => {
-    const { data: services, loading } = useFetch('http://localhost:5000/api/services');
+    const { data: services, loading } = useFetch('/api/services');
 
     if (loading) return (
         <div className="pt-24 px-4 max-w-7xl mx-auto min-h-screen">

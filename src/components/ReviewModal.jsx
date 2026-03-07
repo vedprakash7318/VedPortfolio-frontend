@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axios from 'axios';
+import API from '../api';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaStar, FaPaperPlane, FaCheck } from 'react-icons/fa';
 
@@ -11,7 +11,7 @@ const ReviewModal = ({ isOpen, onClose }) => {
         e.preventDefault();
         setStatus('loading');
         try {
-            await axios.post('http://localhost:5000/api/reviews', formData);
+            await API.post('/api/reviews', formData);
             setStatus('success');
             setTimeout(() => {
                 setStatus('idle');

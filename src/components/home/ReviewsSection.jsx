@@ -11,7 +11,7 @@ import { Spinner } from '../Loaders';
 import ReviewModal from '../ReviewModal';
 
 const ReviewsSection = () => {
-    const { data: reviews, loading } = useFetch('http://localhost:5000/api/reviews');
+    const { data: reviews, loading } = useFetch('/api/reviews');
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     if (loading) return <div className="py-20"><Spinner /></div>;

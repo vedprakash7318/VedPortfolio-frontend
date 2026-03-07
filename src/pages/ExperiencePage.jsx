@@ -4,7 +4,7 @@ import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 import { Spinner } from '../components/Loaders';
 
 const ExperiencePage = () => {
-    const { data: experiences, loading } = useFetch('http://localhost:5000/api/experience');
+    const { data: experiences, loading } = useFetch('/api/experience');
 
     if (loading) return <div className="pt-32 flex justify-center"><Spinner /></div>;
 

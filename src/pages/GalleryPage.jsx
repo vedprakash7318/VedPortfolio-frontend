@@ -5,7 +5,7 @@ import { SkeletonCard } from '../components/Loaders';
 import { FaTimes, FaExpand, FaPlay } from 'react-icons/fa';
 
 const GalleryPage = () => {
-    const { data: gallery, loading } = useFetch('http://localhost:5000/api/gallery');
+    const { data: gallery, loading } = useFetch('/api/gallery');
     const [selectedImage, setSelectedImage] = useState(null);
 
     if (loading) return (

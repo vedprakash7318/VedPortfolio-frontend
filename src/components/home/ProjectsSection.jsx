@@ -5,7 +5,7 @@ import useFetch from '../../hooks/useFetch';
 import { SkeletonCard } from '../Loaders';
 
 const ProjectsSection = () => {
-    const { data: projects, loading } = useFetch('http://localhost:5000/api/projects');
+    const { data: projects, loading } = useFetch('/api/projects');
 
     if (loading) {
         return (
