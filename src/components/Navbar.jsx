@@ -26,7 +26,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
                         <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                            Ved Prakash.
+                            Er. Ved Prakash.
                         </Link>
                     </div>
                     <div className="hidden md:block">
