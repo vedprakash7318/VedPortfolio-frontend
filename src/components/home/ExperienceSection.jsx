@@ -28,7 +28,7 @@ const ExperienceSection = () => {
                     <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-transparent opacity-30"></div>
 
                     <div className="space-y-12">
-                        {experiences.map((exp, index) => (
+                        {(Array.isArray(experiences) ? experiences : []).map((exp, index) => (
                             <motion.div
                                 key={exp._id}
                                 initial={{ opacity: 0, y: 20 }}

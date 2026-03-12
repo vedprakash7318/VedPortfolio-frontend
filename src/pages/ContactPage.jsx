@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import API from '../api';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaCheck } from 'react-icons/fa';
 import { useSettings } from '../context/SettingsContext'; // Import hook
+import SEO from '../components/SEO';
 
 const ContactPage = () => {
     const { settings } = useSettings(); // Get settings
@@ -35,6 +36,10 @@ const ContactPage = () => {
 
     return (
         <div className="ContactPage_container pt-24 px-4 max-w-7xl mx-auto min-h-screen">
+            <SEO 
+                title="Contact Ved Prakash | MERN Stack Developer"
+                description="Get in touch with Ved Prakash for freelance web development projects, cybersecurity consultations, or programming mentorship."
+            />
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}

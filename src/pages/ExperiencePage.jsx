@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import useFetch from '../hooks/useFetch';
 import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 import { Spinner } from '../components/Loaders';
+import SEO from '../components/SEO';
 
 const ExperiencePage = () => {
     const { data: experiences, loading } = useFetch('/api/experience');
@@ -10,6 +11,10 @@ const ExperiencePage = () => {
 
     return (
         <div className="ExperiencePage_container pt-24 px-4 max-w-6xl mx-auto min-h-screen">
+            <SEO 
+                title="Experience & Skills | Ved Prakash"
+                description="Detailed overview of Ved Prakash's technical skills, including MERN Stack, React Native, MySQL, PHP, and CyberSecurity interests."
+            />
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}

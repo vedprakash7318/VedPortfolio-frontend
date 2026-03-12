@@ -16,6 +16,8 @@ const getIcon = (iconName) => {
     return icons[iconName] || <FaCode />;
 };
 
+import SEO from '../components/SEO';
+
 const ServicesPage = () => {
     const { data: services, loading } = useFetch('/api/services');
 
@@ -29,6 +31,10 @@ const ServicesPage = () => {
 
     return (
         <div className="ServicesPage_container pt-24 px-4 max-w-7xl mx-auto min-h-screen">
+            <SEO 
+                title="Services & Mentorship | Ved Prakash"
+                description="Professional web development services and programming mentorship by Ved Prakash. Get expert guidance in MERN stack, JavaScript, and web security."
+            />
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}

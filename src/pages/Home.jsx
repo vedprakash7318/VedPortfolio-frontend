@@ -13,6 +13,7 @@ import Button from '../components/ui/Button';
 
 import { FaReact, FaNodeJs, FaDatabase, FaCode } from 'react-icons/fa';
 import { SiJavascript, SiMongodb } from 'react-icons/si';
+import SEO from '../components/SEO';
 
 const Home = () => {
     const { settings, loading } = useSettings();
@@ -63,6 +64,11 @@ const Home = () => {
 
     return (
         <div className="Home_container">
+            <SEO
+                title={`${settings?.heroTitle || 'Ved Prakash'} | MERN Stack Developer & Full Stack Developer`}
+                description="Portfolio of Ved Prakash, a MERN Stack Developer, Cybersecurity Enthusiast, and Programming Mentor specializing in React, Node.js, and secure web applications."
+                keywords="Ved Prakash, MERN Stack Developer, Cybersecurity, Programming Mentor, React Developer, Node.js Developer, Web Development India"
+            />
             {/* Hero Section */}
             <section className="Home_heroSection min-h-screen flex items-center justify-center relative overflow-hidden bg-slate-900 px-4 md:px-12 lg:px-20">
                 <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">

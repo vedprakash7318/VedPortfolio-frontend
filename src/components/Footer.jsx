@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaHeart } from 'react-icons/fa';
 import { useSettings } from '../context/SettingsContext';
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="flex justify-center gap-6 mb-8">
                     {settings?.github && <a href={settings.github} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white text-2xl transition-colors"><FaGithub /></a>}
                     {settings?.linkedin && <a href={settings.linkedin} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-blue-400 text-2xl transition-colors"><FaLinkedin /></a>}
-                    {settings?.twitter && <a href={settings.twitter} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-sky-400 text-2xl transition-colors"><FaTwitter /></a>}
+                    {settings?.instagram && <a href={settings.instagram} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-pink-500 text-2xl transition-colors"><FaInstagram /></a>}
                 </div>
                 <p className="text-gray-500 text-sm flex items-center justify-center gap-2">
                     Made with <FaHeart className="text-red-500 animate-pulse" /> by Portfolio Admin

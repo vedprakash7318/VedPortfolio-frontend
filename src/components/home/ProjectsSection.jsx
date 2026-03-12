@@ -19,8 +19,8 @@ const ProjectsSection = () => {
         );
     }
 
-    // Display only first 3 projects
-    const displayedProjects = projects.slice(0, 3);
+    // Display only first 3 projects if projects is an array
+    const displayedProjects = Array.isArray(projects) ? projects.slice(0, 3) : [];
 
     return (
         <section className="py-20 bg-slate-900">

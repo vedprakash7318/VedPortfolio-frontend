@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import useFetch from '../hooks/useFetch';
 import { SkeletonCard } from '../components/Loaders';
 import { FaTimes, FaExpand, FaPlay } from 'react-icons/fa';
+import SEO from '../components/SEO';
 
 const GalleryPage = () => {
     const { data: gallery, loading } = useFetch('/api/gallery');
@@ -18,6 +19,10 @@ const GalleryPage = () => {
 
     return (
         <div className="GalleryPage_container pt-24 px-4 max-w-7xl mx-auto min-h-screen">
+            <SEO 
+                title="Gallery & Events | Ved Prakash"
+                description="Gallery showcasing Ved Prakash's professional events, mentorship sessions, and technical workshops."
+            />
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}

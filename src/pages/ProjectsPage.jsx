@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaTimes } from 'react-icons/fa';
 import useFetch from '../hooks/useFetch';
 import { SkeletonCard } from '../components/Loaders';
+import SEO from '../components/SEO';
 
 const ProjectsPage = () => {
     const { data: projects, loading } = useFetch('/api/projects');
@@ -10,18 +11,20 @@ const ProjectsPage = () => {
     const [activeCategory, setActiveCategory] = useState('All');
     const [selectedProject, setSelectedProject] = useState(null);
 
+    const projectsArray = Array.isArray(projects) ? projects : [];
+
     useEffect(() => {
-        setFilteredProjects(projects);
+        setFilteredProjects(projectsArray);
     }, [projects]);
 
-    const categories = ['All', ...new Set(projects.map(p => p.category))];
+    const categories = ['All', ...new Set(projectsArray.map(p => p.category))];
 
     const filterProjects = (category) => {
         setActiveCategory(category);
         if (category === 'All') {
-            setFilteredProjects(projects);
+            setFilteredProjects(projectsArray);
         } else {
-            setFilteredProjects(projects.filter(p => p.category === category));
+            setFilteredProjects(projectsArray.filter(p => p.category === category));
         }
     };
 
@@ -35,6 +38,10 @@ const ProjectsPage = () => {
 
     return (
         <div className="ProjectsPage_container pt-24 px-4 max-w-7xl mx-auto min-h-screen">
+            <SEO 
+                title="Projects | Ved Prakash - Web & Mobile App Developer"
+                description="Explore the portfolio projects by Ved Prakash, showcasing web applications built with the MERN stack, React Native, and focus on clean coding and performance."
+            />
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}

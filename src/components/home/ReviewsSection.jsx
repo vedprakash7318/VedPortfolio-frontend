@@ -54,7 +54,7 @@ const ReviewsSection = () => {
                         }}
                         className="pb-12"
                     >
-                        {reviews.map((review) => (
+                        {(Array.isArray(reviews) ? reviews : []).map((review) => (
                             <SwiperSlide key={review._id}>
                                 <div className="bg-slate-900 p-8 rounded-2xl border border-slate-800 h-full relative">
                                     <FaQuoteLeft className="text-blue-500/20 text-4xl mb-4" />
