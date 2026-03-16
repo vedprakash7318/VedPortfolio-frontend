@@ -133,7 +133,8 @@ const Home = () => {
                             <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full blur-2xl opacity-20 animate-pulse"></div>
                             <img
                                 src={settings?.profileImage || 'https://via.placeholder.com/400'}
-                                alt="Profile"
+                                alt="Ved Prakash - Full Stack Developer & MERN Stack Expert Profile Photo"
+                                title="Ved Prakash Profile - Software Developer"
                                 className="w-full h-full object-cover rounded-full border-4 border-gray-800 shadow-2xl relative z-10 aspect-square"
                             />
                         </motion.div>
