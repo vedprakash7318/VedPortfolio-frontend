@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaInstagram, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaHeart, FaPhoneAlt } from 'react-icons/fa';
 import { useSettings } from '../context/SettingsContext';
 
 const Footer = () => {
@@ -14,6 +14,12 @@ const Footer = () => {
                     {settings?.github && <a href={settings.github} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white text-2xl transition-colors"><FaGithub /></a>}
                     {settings?.linkedin && <a href={settings.linkedin} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-blue-400 text-2xl transition-colors"><FaLinkedin /></a>}
                     {settings?.instagram && <a href={settings.instagram} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-pink-500 text-2xl transition-colors"><FaInstagram /></a>}
+                </div>
+                <div className="flex justify-center items-center gap-2 mb-6 text-gray-300" itemScope itemType="http://schema.org/LocalBusiness">
+                    <FaPhoneAlt className="text-green-500" />
+                    <a href="tel:6307275065" itemProp="telephone" className="hover:text-green-400 transition-colors font-medium tracking-wider" aria-label="Call me at 6307275065">
+                        +91 6307275065
+                    </a>
                 </div>
                 <p className="text-gray-500 text-sm flex items-center justify-center gap-2">
                     Made with <FaHeart className="text-red-500 animate-pulse" /> by Portfolio Admin
