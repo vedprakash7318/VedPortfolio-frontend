@@ -37,8 +37,9 @@ const ContactPage = () => {
     return (
         <div className="ContactPage_container pt-24 px-4 max-w-7xl mx-auto min-h-screen">
             <SEO 
-                title="Contact Ved Prakash | MERN Stack Developer"
-                description="Get in touch with Ved Prakash for freelance web development projects, cybersecurity consultations, or programming mentorship."
+                title="Contact Ved Prakash | Software Developer"
+                description="Contact Ved Prakash for software development, MERN Stack development, SaaS and custom web application development."
+                canonical="https://ervedprakash.in/contact"
             />
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
@@ -70,7 +71,7 @@ const ContactPage = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-gray-300 font-medium">Email</h4>
-                                    <p className="text-blue-400 break-all">{settings?.email || 'contact@example.com'}</p>
+                                    <p className="text-blue-400 break-all">{settings?.email}</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
@@ -79,7 +80,7 @@ const ContactPage = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-gray-300 font-medium">Phone</h4>
-                                    <p className="text-gray-400">{settings?.phone || '+91 123 456 7890'}</p>
+                                    <p className="text-gray-400">{settings?.phone}</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">

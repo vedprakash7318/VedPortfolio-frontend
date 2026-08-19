@@ -3,6 +3,7 @@ import { PageLoader } from '../components/Loaders';
 import { useState, useEffect } from 'react';
 import { useSettings } from '../context/SettingsContext';
 
+import AboutSection from '../components/home/AboutSection';
 import ProjectsSection from '../components/home/ProjectsSection';
 import ServicesSection from '../components/home/ServicesSection';
 import ExperienceSection from '../components/home/ExperienceSection';
@@ -65,9 +66,9 @@ const Home = () => {
     return (
         <div className="Home_container">
             <SEO
-                title={`${settings?.heroTitle || 'Ved Prakash'} | MERN Stack Developer & Full Stack Developer`}
-                description="Portfolio of Ved Prakash, a MERN Stack Developer, Cybersecurity Enthusiast, and Programming Mentor specializing in React, Node.js, and secure web applications."
-                keywords="Ved Prakash, MERN Stack Developer, Cybersecurity, Programming Mentor, React Developer, Node.js Developer, Web Development India"
+                title="Ved Prakash | Software Developer & MERN Stack Developer"
+                description="Ved Prakash is a Software Developer and MERN Stack Developer specializing in React, Node.js, Express.js, MongoDB and full-stack web development."
+                canonical="https://ervedprakash.in/"
             />
             {/* Hero Section */}
             <section className="Home_heroSection min-h-screen flex items-center justify-center relative overflow-hidden bg-slate-900 px-4 md:px-12 lg:px-20">
@@ -87,14 +88,19 @@ const Home = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="text-2xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight"
+                            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight leading-tight text-white"
                         >
-                            <span className="block text-white mb-2 text-3xl md:text-5xl lg:text-6xl">{settings?.heroTitle || "Hey, I'm Ved Prakash"}</span>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 block min-h-[1.2em] text-2xl md:text-5xl lg:text-6xl">
-                                {displayText}
-                                <span className="animate-pulse text-gray-400">|</span>
-                            </span>
+                            {settings?.heroTitle || "Ved Prakash"}
                         </motion.h1>
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                            className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 block min-h-[1.2em] text-2xl md:text-4xl lg:text-5xl font-bold mb-6"
+                        >
+                            {displayText}
+                            <span className="animate-pulse text-gray-400">|</span>
+                        </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -185,6 +191,7 @@ const Home = () => {
                 </div>
             </section>
 
+            <AboutSection />
             <div id="projects">
                 <ProjectsSection />
             </div>

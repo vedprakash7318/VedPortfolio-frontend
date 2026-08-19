@@ -12,8 +12,9 @@ const ExperiencePage = () => {
     return (
         <div className="ExperiencePage_container pt-24 px-4 max-w-6xl mx-auto min-h-screen">
             <SEO 
-                title="Experience & Skills | Ved Prakash"
-                description="Detailed overview of Ved Prakash's technical skills, including MERN Stack, React Native, MySQL, PHP, and CyberSecurity interests."
+                title="Experience | Ved Prakash | Software Developer"
+                description="Explore the professional experience, technical expertise and software development journey of Ved Prakash."
+                canonical="https://ervedprakash.in/experience"
             />
             <motion.div
                 initial={{ opacity: 0, y: -20 }}

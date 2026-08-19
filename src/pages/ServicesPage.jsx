@@ -32,8 +32,9 @@ const ServicesPage = () => {
     return (
         <div className="ServicesPage_container pt-24 px-4 max-w-7xl mx-auto min-h-screen">
             <SEO 
-                title="Services & Mentorship | Ved Prakash"
-                description="Professional web development services and programming mentorship by Ved Prakash. Get expert guidance in MERN stack, JavaScript, and web security."
+                title="Software Development Services | Ved Prakash"
+                description="Explore software development, MERN Stack development, SaaS development, website development and custom software services by Ved Prakash."
+                canonical="https://ervedprakash.in/services"
             />
             <motion.div
                 initial={{ opacity: 0, y: -20 }}

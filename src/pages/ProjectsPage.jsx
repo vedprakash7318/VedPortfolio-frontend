@@ -39,8 +39,9 @@ const ProjectsPage = () => {
     return (
         <div className="ProjectsPage_container pt-24 px-4 max-w-7xl mx-auto min-h-screen">
             <SEO 
-                title="Projects | Ved Prakash - Web & Mobile App Developer"
-                description="Explore the portfolio projects by Ved Prakash, showcasing web applications built with the MERN stack, React Native, and focus on clean coding and performance."
+                title="Projects | Ved Prakash | Software Developer"
+                description="Explore software development and MERN Stack projects built by Ved Prakash using React, Node.js, Express.js and MongoDB."
+                canonical="https://ervedprakash.in/projects"
             />
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
@@ -86,8 +87,9 @@ const ProjectsPage = () => {
                             <div className="h-56 overflow-hidden">
                                 <img
                                     src={project.image}
-                                    alt={project.title}
+                                    alt={`${project.title} built by Ved Prakash`}
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    loading="lazy"
                                 />
                             </div>
                             <div className="p-6">
@@ -128,7 +130,7 @@ const ProjectsPage = () => {
                             <div className="h-64 md:h-96 w-full relative">
                                 <img
                                     src={selectedProject.image}
-                                    alt={selectedProject.title}
+                                    alt={`${selectedProject.title} screenshot built by Ved Prakash`}
                                     className="w-full h-full object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>

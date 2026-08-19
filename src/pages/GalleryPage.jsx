@@ -20,8 +20,9 @@ const GalleryPage = () => {
     return (
         <div className="GalleryPage_container pt-24 px-4 max-w-7xl mx-auto min-h-screen">
             <SEO 
-                title="Gallery & Events | Ved Prakash"
-                description="Gallery showcasing Ved Prakash's professional events, mentorship sessions, and technical workshops."
+                title="Gallery | Ved Prakash"
+                description="Explore professional events, projects, development work and portfolio highlights of Ved Prakash."
+                canonical="https://ervedprakash.in/gallery"
             />
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
@@ -63,7 +64,7 @@ const GalleryPage = () => {
                         ) : (
                             <img
                                 src={item.image}
-                                alt={item.title || 'Gallery Image'}
+                                alt={item.title ? `${item.title} - Ved Prakash Gallery` : 'Ved Prakash Software Developer Portfolio Gallery Image'}
                                 className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
                                 loading="lazy"
                             />
@@ -112,7 +113,7 @@ const GalleryPage = () => {
                             ) : (
                                 <img
                                     src={selectedImage.image}
-                                    alt={selectedImage.title}
+                                    alt={selectedImage.title ? `${selectedImage.title} - Ved Prakash Gallery` : 'Ved Prakash Portfolio Image'}
                                     className="w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
                                 />
                             )}

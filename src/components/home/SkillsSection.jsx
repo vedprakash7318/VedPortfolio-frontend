@@ -34,7 +34,7 @@ const SkillsSection = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-4">
-                        Tech Stack
+                        Technical Skills
                     </h2>
                     <p className="text-gray-400">Technologies I work with</p>
                 </motion.div>
